@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="rpgRL.css">
+    <script src="rpgRLjs.js"></script>
+    <title>RPG RL</title>
+  </head>
+  <body>
+    <h1>Florian Wagner</h1>
+    <fieldset id="info">
+      <label id="titleLabel">No title</label>
+      <label id="levelLabel">Level 1</label>
+      <label id="raceLabel">Mensch</label> 
+    </fieldset>
+    <fieldset id="attributes">
+      <h4>Attributes</h4>
+      <label id="strengthLabel">Strength Lvl 3</label>
+      <label id="enduranceLabel">Endurance Lvl 1</label>
+    </fieldset>
+    <fieldset class="grid">
+      <fieldset id="strengthStats" class="currentStats">
+        <h4>Current Strength Stats:</h4>
+        <div class="grid">
+          <label id="benchpressLabel" class="grid">
+            <label>Benchpress:</label><label class="statP" id="benchpressText">65kg</label>
+          </label>
+          <input type="text" id="benchpressInput" placeholder="weight in kg">
+          <label id="rowLabel" class="grid">
+            <label>Rowing:</label><label class="statP">70kg</label>
+          </label>
+          <input type="text" id="rowInput" placeholder="weight in kg">
+          <label id="squatLabel" class="grid">
+            <label>Squats:</label><label class="statP">100kg</label>
+          </label>
+          <input type="text" id="squatInput" placeholder="weight in kg">
+          <label id="shouderpressLabel" class="grid">
+            <label>Shoulderpress:</label><label class="statP">30kg</label>
+          </label>
+          <input type="text" id="shoulderpressInput" placeholder="weight in kg">
+        </div>
+      </fieldset>
+      
+      <fieldset id="requiredStrengthStats">
+        <h4>Strength Level 4 Requirements:</h4>
+        <label id="benchpressReqLabel" class="grid">
+          <label>Benchpress:</label><label>65kg</label>
+        </label>
+        <label id="rowReqLabel" class="grid">
+         <label>Rowing:</label><label>70kg</label>
+        </label>
+        <label id="squatReqLabel" class="grid">
+          <label>Squats:</label><label>100kg</label>
+        </label>
+        <label id="shouderpressReqLabel" class="grid">
+          <label>Shoulderpress:</label><label>30kg</label>
+        </label>
+      </fieldset>
+
+      <fieldset id="enduranceSats" class="currentStats">
+        <h4>Current Endurance Stats:</h4>
+        <div class="grid">
+          <label id="cooperLabel" class="grid">
+            <label>Test:</label><label>2500m</label>
+          </label>
+          <input type="text" id="cooperInput" placeholder="distance in m">     
+          <label id="sprintLabel" class="grid">
+            <label>Sprint:</label><label>13s</label>
+          </label>
+          <input type="text" id="sprintInput" placeholder="time in s">
+          <label id="plankLabel" class="grid">
+            <label>Plank:</label><label>60s</label>
+          </label>
+          <input type="text" id="plankInput" placeholder="time in s">
+        </div>
+      </fieldset>
+      
+      <fieldset id="requiredEnduranceStats">
+        <h4>Endurance Level 2 Requirements:</h4>
+        <label id="cooperReqLabel" class="grid">
+          <label>Cooper Test:</label><label>2750m</label>
+        </label>
+        <label id="sprintReqLabel" class="grid">
+          <label>100m Sprint:</label> 12.5s</label>
+        </label>
+        <label id="plankReqLabel" class="grid">
+          <label>Plank:</label> 120s</label>
+        </label>
+      </fieldset>
+    </fieldset>
+    <input type="submit" value="Update Stats" onsubmit="updateCookies()">
+  </body>
+</html> 

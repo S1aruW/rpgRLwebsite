@@ -1,0 +1,55 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: bisque;
+}
+
+fieldset{
+    margin: 0px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 0px;
+}
+
+label,p{
+    width: 130px;
+}
+@media screen and (max-width: 800px){
+    label,p{
+        width: 100%;
+    }
+}
+
+#info{   
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+#attributes{
+    display: block;
+}
+
+#titleLabel{
+    display: block;
+    width: 100%;
+}
+
+h1{
+    margin: auto;
+    text-align: center;
+}
+
+.fillerHeader{
+    visibility: hidden;
+}
+/*
+input{
+    visibility: hidden;
+}*/
+
+input[type=submit]{
+    visibility: visible;
+}
