@@ -1,15 +1,20 @@
-'use strict';
-document.addEventListener('DOMContentLoaded', init);
-document.addEventListener('DOMContentLoaded', refreshOrder);//make reload consistent
+const indexDB = 
+  window.indexedDB ||
+  window.mozIndexDB ||
+  window.msIndexDB ||
+  window.shIndexDB;
 
-function init(){
-  createCookies();
-}
+  const request = indexDB.open("StatsDatabase",1);
 
-function createCookies(){
-  var benchpressCookie
-}
+  request.onerror = function(event){
+    console.error("Error fak");
+    console.error(event);
+  }
 
-function updateCookies(){
-  benchpressCookie = document.getElementById("benchpressInput").value;
-}
+  request.onupgradeneeded = function(){
+    const db = request.result;
+    const store = db.createObjectStore("stats",{keyPath: "id"});
+    store.createIndex("strengthStats",["exercise", "weight"], {unique: false});
+  };
+
+  
