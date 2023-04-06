@@ -45,10 +45,6 @@ h1{
 .fillerHeader{
     visibility: hidden;
 }
-/*
-input{
-    visibility: hidden;
-}*/
 
 input[type=submit]{
     visibility: visible;
