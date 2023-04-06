@@ -1,6 +1,6 @@
 
 function toggleInput(){
-  if(document.getElementsByClassName("input")
+  if(document.getElementsByClassName("input");
 }
 
   
